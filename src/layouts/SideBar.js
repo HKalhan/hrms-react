@@ -5,8 +5,8 @@ export default function Sidebar() {
     return (
         <div>
              <Menu inverted icon="labeled" vertical>
-              <Menu.Item name="idea">
-                <Icon name="idea" />
+              <Menu.Item name="share square outline">
+                <Icon name="share square outline" />
                 Job Adverts
               </Menu.Item>
              <Menu.Item name="users" >
