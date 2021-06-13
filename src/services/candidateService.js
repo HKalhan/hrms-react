@@ -1,9 +1,7 @@
-import React from 'react'
+import axios from "axios"
 
-export default function candidateService() {
-    return (
-        <div>
-            
-        </div>
-    )
+export   default class CandidateService{
+    getCandidates(){
+        return axios.get("http://localhost:8080/api/candidates/getall")
+    }
 }
