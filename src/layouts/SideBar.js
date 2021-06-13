@@ -5,8 +5,8 @@ export default function Sidebar() {
     return (
         <div>
              <Menu inverted icon="labeled" vertical>
-              <Menu.Item name="bullhorn">
-                <Icon name="bullhorn" />
+              <Menu.Item name="idea">
+                <Icon name="idea" />
                 Job Adverts
               </Menu.Item>
              <Menu.Item name="users" >
