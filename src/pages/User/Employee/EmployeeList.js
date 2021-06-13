@@ -27,6 +27,7 @@ export default function EmployeeList() {
               <Table.HeaderCell>First Name</Table.HeaderCell>
               <Table.HeaderCell>Last Name</Table.HeaderCell>
               <Table.HeaderCell>Email</Table.HeaderCell>
+              <Table.HeaderCell>Detail</Table.HeaderCell>
             </Table.Row>
           </Table.Header>
   

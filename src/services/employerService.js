@@ -1,9 +1,8 @@
-import React from 'react'
+import axios from "axios";
 
-export default function employerService() {
-    return (
-        <div>
-            
-        </div>
-    )
+export default class EmployerService{
+    getEmloyers(){
+        return axios.get("http://localhost:8080/api/employers/getall")
+    }
+
 }
