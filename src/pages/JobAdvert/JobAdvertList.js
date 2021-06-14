@@ -36,7 +36,7 @@ export default function JobAdvertList() {
                     <Table.Cell>{jobAdvert.jobTitle.title}</Table.Cell>
                     <Table.Cell>{jobAdvert.openPositionCount}</Table.Cell>
                     <Table.Cell>{jobAdvert.applicationDeadline}</Table.Cell>
-                    <Table.Cell>{jobAdvert.isActive}</Table.Cell>
+                    <Table.Cell>{jobAdvert.active.toString()}</Table.Cell>
                     <Table.Cell><Button>View</Button></Table.Cell>
                     </Table.Row>
             ))}
