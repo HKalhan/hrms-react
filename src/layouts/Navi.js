@@ -1,8 +1,21 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Button, Container, Icon, Menu } from 'semantic-ui-react'
 import Language from './Language'
+import SignedIn from './SignedIn'
+import SignedOut from './SignedOut'
 
 export default function Navi() {
+
+    const [isAuthenticated, setIsAuthenticated] = useState(false)
+
+    function handleSignOut(params){
+        setIsAuthenticated(false)
+    }
+
+    function handleSignIn(params){
+        setIsAuthenticated(true)
+    }
+
     return (
         <div>
             <Menu inverted fixed="large">
@@ -23,13 +36,8 @@ export default function Navi() {
 
                     <Menu.Menu position='right'>
                         <Language />
-
-
-
-                        <Menu.Item>
-                            <Button primary>Sign In</Button>
-                            <Button negative>Sign Up</Button>
-                        </Menu.Item>
+                        {isAuthenticated?<SignedIn signOut={handleSignOut}/>:<SignedOut signIn={handleSignIn}/>}
+                       
                     </Menu.Menu>
                 </Container>
             </Menu>
