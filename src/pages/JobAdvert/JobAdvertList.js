@@ -2,6 +2,7 @@ import React from 'react'
 import { Icon, Header, Table, Button } from 'semantic-ui-react'
 import JobAdvertService from '../../services/jobAdvertService';
 import {useState, useEffect} from 'react';
+import { NavLink } from 'react-router-dom';
 
 export default function JobAdvertList() {
 
@@ -9,7 +10,7 @@ export default function JobAdvertList() {
 
     useEffect(() => {
        let jobAdvertService= new JobAdvertService()
-       jobAdvertService.getJobAdverts().then((result)=>setjobAdverts(result.data.data))
+       jobAdvertService.getAllJobAdverts().then((result)=>setjobAdverts(result.data.data))
     }, []);
 
 
@@ -37,7 +38,7 @@ export default function JobAdvertList() {
                     <Table.Cell>{jobAdvert.openPositionCount}</Table.Cell>
                     <Table.Cell>{jobAdvert.applicationDeadline}</Table.Cell>
                     <Table.Cell>{jobAdvert.active.toString()}</Table.Cell>
-                    <Table.Cell><Button>View</Button></Table.Cell>
+                    <Table.Cell><Button as ={NavLink} to = "/jobAdvertDetail">View</Button></Table.Cell>
                     </Table.Row>
             ))}
         </Table.Body>
