@@ -8,8 +8,8 @@ export default function JobAdvertList() {
     const [jobAdverts, setjobAdverts] = useState([]);
 
     useEffect(() => {
-       let jobAdvertService= new JobAdvertService();
-       jobAdvertService.getJobAdverts().then((result)=>setjobAdverts(result.data.data));
+       let jobAdvertService= new JobAdvertService()
+       jobAdvertService.getJobAdverts().then((result)=>setjobAdverts(result.data.data))
     }, []);
 
 
