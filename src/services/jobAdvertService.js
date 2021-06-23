@@ -5,14 +5,15 @@ export default class JobAdvertService{
     return axios.get("http://localhost:8080/api/jobAdvert/getAll")
 }
 
-addJobAdvert(jobAdvert){
-    return axios.post("http://localhost:8080/api/jobAdvert/add", jobAdvert)
+addJobAdverts(jobAdvert){
+    return axios.post("http://localhost:8080/api/jobAdvert/addDto", jobAdvert)
 }
 
 
-getById(employerId){
-    return axios.get("http://localhost:8080/api/jobAdvert/getAllActiveJobAdvertByEmployer?id=${employerId}")
+getByEmployerId(employerId){
+    return axios.get(`http://localhost:8080/api/jobAdvert/getByEmployerId?employerId=`+ employerId )
 }
+
 
 
 }

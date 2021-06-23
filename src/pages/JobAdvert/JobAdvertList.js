@@ -1,9 +1,10 @@
 import React from 'react'
-import { Icon, Header, Table, Button } from 'semantic-ui-react'
+import { Icon, Header, Table, Button,Link } from 'semantic-ui-react'
 import JobAdvertService from '../../services/jobAdvertService';
 import {useState, useEffect} from 'react';
-import { NavLink } from 'react-router-dom';
 
+import { NavLink } from 'react-router-dom';
+import JobAdvertDetail from './JobAdvertDetail';
 export default function JobAdvertList() {
 
     const [jobAdverts, setjobAdverts] = useState([]);
@@ -39,6 +40,7 @@ export default function JobAdvertList() {
                     <Table.Cell>{jobAdvert.applicationDeadline}</Table.Cell>
                     <Table.Cell>{jobAdvert.active.toString()}</Table.Cell>
                     <Table.Cell><Button as ={NavLink} to = "/jobAdvertDetail">View</Button></Table.Cell>
+                    
                     </Table.Row>
             ))}
         </Table.Body>
