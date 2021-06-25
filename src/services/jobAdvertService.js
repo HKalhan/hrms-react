@@ -15,5 +15,10 @@ getByEmployerId(employerId){
 }
 
 
+getById(id){
+    return axios.get("http://localhost:8080/api/jobAdvert/getById?id=" + id)
+}
+
+
 
 }
