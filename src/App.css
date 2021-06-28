@@ -1,11 +1,20 @@
 .App {
   text-align: center;
+  background-color:rgb(247, 248, 239);
+  width: auto;
 }
 
 .ui.main.container{
   margin-top: 5em;
 }
 
+
+.extra{
+  text-align: center;
+}
+
 .ui.sidebar{
   margin-left: 2em;
  }
+
+ 

@@ -5,7 +5,7 @@ import { Link, NavLink } from 'react-router-dom';
 export default function Sidebar() {
     return (
         <div>
-             <Menu inverted icon="labeled" vertical>
+             <Menu inverted icon="labeled" vertical color='grey'>
               <Menu.Item as={NavLink} to="/jobAdverts">
                 <Icon name="share square outline" />
                 Job Adverts

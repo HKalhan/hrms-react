@@ -7,7 +7,7 @@ export default function CandidateCv() {
 
     let{candidateId} = useParams();
 
-    const [cv, setcv] = useState([]); //{} koymuş?
+    const [cv, setcv] = useState([]); 
 
     useEffect(() => {
         let candidateService= new CandidateService
@@ -15,7 +15,7 @@ export default function CandidateCv() {
 
             setcv(result.data.data)
         })
-    }, [])
+    }, [candidateId])
 
     return (
         <div>

@@ -2,7 +2,7 @@ import React from 'react'
 import { Header, Icon, Table, Button } from 'semantic-ui-react'
 import { useState, useEffect } from "react";
 import CandidateService from '../../../services/candidateService';
-
+import { Link } from 'react-router-dom';
 export default function CandidateList() {
 
     const [candidates, setcandidates] = useState([])
@@ -35,7 +35,11 @@ export default function CandidateList() {
                             <Table.Cell>{candidate.lastName}</Table.Cell>
                             <Table.Cell>{candidate.email}</Table.Cell>
                             <Table.Cell>
-                                <Button>View</Button>
+                                <Button  animated as={Link} to={`/CV/${candidate.id}`}>
+                                <Button.Content visible> View Cv </Button.Content>
+                                <Button.Content hidden>
+                                    <Icon name="arrow right" />
+                                </Button.Content> </Button>
                             </Table.Cell>
                         </Table.Row>
                     ))}

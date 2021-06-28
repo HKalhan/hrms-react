@@ -10,8 +10,8 @@ addJobAdverts(jobAdvert){
 }
 
 
-getByEmployerId(employerId){
-    return axios.get(`http://localhost:8080/api/jobAdvert/getByEmployerId?employerId=`+ employerId )
+getActiveAdvertByEmployerId(id){
+    return axios.get(`http://localhost:8080/api/jobAdvert/getAllActiveJobAdvertByEmployer?id=`+ id )
 }
 
 

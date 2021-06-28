@@ -5,7 +5,8 @@ import { Container, Divider, Grid, Header, Image, List, Segment, } from 'semanti
 export default function Footer() {
     return (
         <div className="Footer">
-            <Segment inverted style={{ margin: '5em 0em 0em', padding: '5em 0em' }} vertical>
+            <Segment inverted style={{ margin: '5em 0em 0em', padding: '5em 0em' }} vertical color='grey
+            '>
                 <Container textAlign='center'>
                     <Grid columns={1} divided stackable inverted>
                         <Grid.Row>
