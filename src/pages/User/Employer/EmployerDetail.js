@@ -29,7 +29,7 @@ export default function EmployerDetail() {
               <Grid.Row>
                   <Grid.Column width={6}>
 
-                      <Image src='https://www.logoground.com/uploads/201564272015-09-304956681LetterK.jpg' size ='medium' verticalAlign='middle'  />
+                      <Image src={employers.employer?.image} size ='medium' verticalAlign='middle'  />
                       
 
                       <Header as="h3" floated=" left">

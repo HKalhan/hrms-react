@@ -5,8 +5,8 @@ export default class JobAdvertService{
     return axios.get("http://localhost:8080/api/jobAdvert/getAll")
 }
 
-addJobAdverts(jobAdvert){
-    return axios.post("http://localhost:8080/api/jobAdvert/addDto", jobAdvert)
+addJobAdverts(values){
+    return axios.post("http://localhost:8080/api/jobAdvert/add", values)
 }
 
 
@@ -20,5 +20,20 @@ getById(id){
 }
 
 
+getJobAdvertRequests(){
+    return axios.get("http://localhost:8080/api/jobAdvert/get-requests")
+}
 
+
+getApprove(id){
+    return axios.get("http://localhost:8080/api/jobAdvert/approve?id=" + id)
+}
+
+getCancel(id){
+    return axios.get("http://localhost:8080/api/jobAdvert/cancel?id="+ id)
+}
+
+getApprovedAdvert() {
+    return axios.get("http://localhost:8080/api/jobAdvert/get-approved")
+}
 }

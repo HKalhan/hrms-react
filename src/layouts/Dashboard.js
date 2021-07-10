@@ -13,6 +13,7 @@ import EmployerDetail from '../pages/User/Employer/EmployerDetail';
 import EmployerList from '../pages/User/Employer/EmployerList';
 import Section from "./Section";
 import SideBar from "./SideBar";
+import JobAdvertRequestsList from '../pages/JobAdvert/JobAdvertRequestsList';
 
 
 export default function Dashboard() {
@@ -34,7 +35,7 @@ export default function Dashboard() {
                           <Route exact path="/jobAdvertAdd" component={JobAdvertAdd} />
                         
                           <Route exact path="/CV/:candidateId" component={CandidateCv} />
-                          
+                          <Route path="/advertRequests" component={JobAdvertRequestsList} />
 
                          </Grid.Column>
                  </Grid.Row>
