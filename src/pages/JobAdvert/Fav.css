@@ -1,0 +1,15 @@
+.jobAdvert-links {
+    text-align: right;
+
+}
+
+.jobAdvert-links a {
+    display: inline-block;
+    margin-left: 5px;
+    color:rgb(245, 238, 176);
+    transition: 0.3s;
+    font-size: 17px;
+    font-size: 40px
+    
+}
+

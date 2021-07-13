@@ -4,7 +4,12 @@ import JobAdvertService from '../../services/jobAdvertService';
 import {useState, useEffect} from 'react';
 import { NavLink } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { addToFav } from '../../store/actions/favActions';
+import { useDispatch } from 'react-redux';
+import { toast } from 'react-toastify';
 export default function JobAdvertList() {
+
+  const dispatch = useDispatch();
 
     const [jobAdverts, setjobAdverts] = useState([]);
 
@@ -13,6 +18,10 @@ export default function JobAdvertList() {
        jobAdverts.getApprovedAdvert().then((result)=>setjobAdverts(result.data.data))
     }, []);
 
+    const handleAddToFav = (jobAdvert) => {
+      dispatch(addToFav(jobAdvert));
+      toast.success(`${jobAdvert.id} favorilere eklendi!`)
+    };
 
     return (
         <div>
@@ -44,6 +53,13 @@ export default function JobAdvertList() {
                                     <Icon name="arrow right" />
                                 </Button.Content>
                             </Button>
+
+
+                            <div className="jobAdvert-links" position="bottom-left" >
+                                <a href="/#">
+                                    <Icon  onClick={()=>handleAddToFav(jobAdvert)} name="like" />
+                                </a>
+                               </div>
                        
 
     

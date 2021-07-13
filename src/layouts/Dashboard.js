@@ -10,15 +10,19 @@ import CandidateList from '../pages/User/Candidate/CandidateList';
 import EmployeeList from '../pages/User/Employee/EmployeeList';
 import EmployerDetail from '../pages/User/Employer/EmployerDetail';
 
+
 import EmployerList from '../pages/User/Employer/EmployerList';
 import Section from "./Section";
 import SideBar from "./SideBar";
 import JobAdvertRequestsList from '../pages/JobAdvert/JobAdvertRequestsList';
+import { ToastContainer } from 'react-toastify';
+import FavDetail from '../pages/JobAdvert/FavDetail';
 
 
 export default function Dashboard() {
     return (
         <div>
+             <ToastContainer position="bottom-right"/>
            <Grid>
                  <Grid.Row>
                      <Grid.Column width={2}>
@@ -33,7 +37,7 @@ export default function Dashboard() {
                           <Route exact path="/jobAdverts" component={JobAdvertList} />
                           <Route exact path="/jobAdvertDetail/:id" component={JobAdvertDetail} />
                           <Route exact path="/jobAdvertAdd" component={JobAdvertAdd} />
-                        
+                          <Route path="/fav" component={FavDetail} />
                           <Route exact path="/CV/:candidateId" component={CandidateCv} />
                           <Route path="/advertRequests" component={JobAdvertRequestsList} />
 
